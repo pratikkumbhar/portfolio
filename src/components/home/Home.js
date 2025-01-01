@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Style from './Home.module.scss';
 import me from '../../img/self.png';
 import classNames from 'classnames';
@@ -6,10 +6,24 @@ import EmojiBullet from "./EmojiBullet";
 import SocialIcon from "./SocialIcon";
 import {Box} from "@mui/material";
 import {info} from "../../info/Info";
+import Form from '../form/Form';
 
 export default function Home({innerRef}) {
-
+   const [clicked,setClicked] = useState(false)
+const contactClicked=(e)=>{
+   e.preventDefault();
+   if(clicked==false)
+   {
+      setClicked(true)
+   }
+   
+    
+}
+function handleClicked(){
+   setClicked(false)
+}
    return (
+      <>
       <Box ref={innerRef} component={'main'} display={'flex'} flexDirection={{xs: 'column', md: 'row'}} alignItems={'center'}
            justifyContent={'center'} minHeight={'calc(100vh - 175px)'} id={'home'}>
          <Box className={classNames(Style.avatar, Style.shadowed)} alt={'image of developer'} style={{background: info.gradient}} component={'img'} src={me} width={{xs: '35vh', md: '40vh'}}
@@ -30,6 +44,14 @@ export default function Home({innerRef}) {
                ))}
             </Box>
          </Box>
+         
       </Box>
+      <div style={{width:"100vw",display:"flex",justifyItems:"center",alignItems:"center"}}>
+
+      <button className='button' onClick={(e)=>contactClicked(e)}>Contact Me</button>
+      </div>
+      {clicked ?<Form closeClicked={handleClicked}></Form> :null }
+   </>
+      
    )
 }

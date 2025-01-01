@@ -1,5 +1,59 @@
 @import "../../variables.modules";
 
+
+button {
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  outline: none;
+  border: none;
+  margin: auto;
+  background: linear-gradient(90deg, rgb(1, 147, 150) 0%, rgb(96, 41, 160) 100%);
+  position: relative;
+  padding: 12px 24px;
+  z-index: 1;
+  color: $white;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:after {
+    background:  linear-gradient(270deg, rgb(1, 147, 150) 0%, rgb(96, 41, 160) 100%);
+    content: '';    
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0; 
+    left: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: -1;
+    transition: opacity 0.5s;
+    border-radius: 8px;
+  }
+
+  button:hover:after {
+  opacity: 1;    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 h1 {
   font-size: 2rem;
   text-align: center;
@@ -47,3 +101,6 @@ a:hover {
   60% { transform: rotate( 0.0deg) }
   100% { transform: rotate( 0.0deg) }
 }
+
+
+

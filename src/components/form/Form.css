@@ -1,0 +1,27 @@
+@import "../../variables.modules.scss";
+*{
+    color: #f8f8f8;
+}
+.defuser{
+    z-index: 2;
+    position: absolute;
+    top: 0%;
+    width: 100vw ;
+    height: 100%;
+    left: 0%;
+    
+    opacity: 0.6;
+    background-color: white;
+}
+.mainContainer{
+    z-index: 3;
+    border-radius: 10px;
+    opacity: 1;
+    padding: 50px;
+    position: absolute;
+    top: 10%;
+    left: 25%;
+    background: #000;
+    width: 50vw;
+    height: 80vh;
+}

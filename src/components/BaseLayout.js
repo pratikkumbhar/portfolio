@@ -48,7 +48,7 @@ export default function BaseLayout() {
             </Grid>
             <Grid item>
                <Box component={'footer'} display={'flex'} flexDirection={'column'} alignItems={'center'}
-                  py={'1.5rem'} sx={{ opacity: 0.7 }} width={'100%'}>
+                  pt={'1.5rem'} sx={{ opacity: 0.7 }} width={'100%'} marginTop={'34px'} marginBottom={'10px'}>
                   <p>Site created by Pratik Kumbhar in 2023</p>
                </Box>
             </Grid>
